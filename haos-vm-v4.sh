@@ -284,7 +284,7 @@ pvesm alloc $STORAGE $VMID $DISK0 4M 1>&/dev/null
 qm importdisk $VMID ${FILE%.*} $STORAGE ${DISK_IMPORT:-} 1>&/dev/null
 qm set $VMID \
   -efidisk0 ${DISK0_REF}${FORMAT} \
-  -scsi0 ${DISK1_REF},${THIN}size=32G \
+  -scsi0 ${DISK1_REF},${THIN}size=8G \
   -boot order=scsi0 \
   -description "# Home Assistant OS
 ### https://github.com/tteck/Proxmox
